@@ -26,7 +26,7 @@ vue-project项目介绍：
 
 项目主要功能点讲解：
 1、export default { }
-这是属于ES5中的语法，方便进行发布与调用，在这个demo中大量使用到了export，很方便的就可以import
+这是属于ES5中的语法，方便进行发布与调用，在这个demo中大量使用到了export，很方便的就可以import，并且如果是进行发布的话就需要这个模式，这样vue-loadercaihui
 2、组件
 父子组件和单个页面的父子组件并没有什么区别，只是可能没有写在同一个文件，子组件分别生成一个vue文件
 3、路由
@@ -42,10 +42,18 @@ d、mutaions的状态管理
 
 
 虽然在项目里面可能进行了模块划分，但是需要明确的是都是全局参数和函数，也就是说在nav.js里面的state也可以在hello.js里面进行使用
+5、整个项目是用脚手架进行搭建的，主要的流程：
+npm install -g vue-cli
+vue init webpack-simple hello-vue
+cd hello-vue
+npm install
+npm run dev
+//到达上一步的时候项目已经搭建起来了，并且组件是使用的热重载进行开发
+npm run build
+//进行发布，将vue组件以及js和css文件进行压缩组合，直接运行dist文件夹下面的index.html就可以了
 
 最后直接进行demo进行源码分析最实在
 
 其中写了两个jsonp进行跨域访问，用php写的，文件在demo里面有，名字为  fun.php
-
 
 
