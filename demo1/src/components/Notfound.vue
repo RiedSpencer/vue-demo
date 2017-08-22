@@ -20,6 +20,8 @@ export default {
 
   created(){
         var that = this;
+
+
             setInterval(function(){
                 if(that.time>1){
                     that.time--;

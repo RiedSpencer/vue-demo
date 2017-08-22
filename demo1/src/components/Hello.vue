@@ -13,7 +13,7 @@
 
             <li><i class="icon iconfont icon-menu"></i>Menu</li>
 
-            <li v-for="p in navs"  @click="nav( p.name )">
+            <li v-for="p in navs"  @click="nav( p.name )" v-bind:class=" p.name  " >
                 <span><i v-bind:class=" p.icon  "></i>{{ p.title }}</span>
             </li>
 
@@ -27,7 +27,7 @@
             </div>
             <div v-else>
 
-                <div  class="ban-sin" v-for="p in navs" @click="nav( p.name )">
+                <div  id="ban-sin" v-bind:class=" p.name  " v-for="p in navs" @click="nav( p.name )"  >
                       <span >{{ p.title }}</span>
                  </div>
 
@@ -109,6 +109,8 @@ header p .iconfont{font-size:18px;margin-right:10px;cursor:pointer}
 .nav li .iconfont{font-size:20px;margin-right:10px;}
 .nav li:not(:first-child):hover{background-color:#009A61;color:white;cursor:pointer;}
 
-.ban-sin{width:150px;height:150px;line-height:150px;text-align:center;border-radius:50%;background-color:#e8e8e8;display:inline-block;margin:20px;cursor:pointer;font-size:24px;}
-.ban-sin:hover{background-color:#009A61;color:white;}
+#ban-sin{width:150px;height:150px;line-height:150px;text-align:center;border-radius:50%;background-color:#e8e8e8;display:inline-block;margin:20px;cursor:pointer;font-size:24px;}
+#ban-sin:hover{background-color:#009A61;color:white;}
+
+.clicked_nav{background-color:#009A61;color:white;}
 </style>

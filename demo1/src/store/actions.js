@@ -7,7 +7,10 @@ import Vue from 'vue'
 
 export const nav = ({commit},type) =>{
 
-    Vue.http.jsonp('http://www.xxx.com/fun.php',
+    $(".nav li").removeClass("clicked_nav");
+    $(".nav ."+type).addClass("clicked_nav");
+
+    Vue.http.jsonp('http://demo.raoye.me/fun.php',
 
         {
             params:{

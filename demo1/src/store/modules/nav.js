@@ -1,7 +1,9 @@
 /**
  * Created by Administrator on 2017/8/21.
  */
-
+/**
+ * Created by Administrator on 2017/8/21.
+ */
 //Login组件
 import data from '../../api/data'
 import * as types from '../mutations'

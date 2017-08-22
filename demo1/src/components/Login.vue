@@ -35,7 +35,7 @@ export default {
 
         var that = this;
 
-        that.$http.jsonp('http://www.xxx.com/fun.php',
+        that.$http.jsonp('http://demo.raoye.me/fun.php',
 
                         {
                             params:{

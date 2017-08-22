@@ -3,7 +3,7 @@
 
     <div class="nav-title">
         <ul>
-            <li v-for="nav in webarr" @click="cont(nav.url)">
+            <li v-for="nav in webarr" @click="cont(nav.url,nav.key)" v-bind:class=" nav.key ">
               {{ nav.key }}
             </li>
             <li @click="add">
@@ -60,9 +60,13 @@ export default {
 
   methods:{
 
-    cont:function(url){
+    cont:function(url,key){
 
         $("iframe").attr("src",url);
+
+        $(".nav-title li").removeClass("clicked_nav");
+
+        $(".nav-title  ."+key).addClass("clicked_nav");
 
     },
 
@@ -86,7 +90,7 @@ export default {
         var title = $(".title").val();
         var url = $(".website").val();
         var that = this;
-        this.$http.jsonp('http://www.xxx.com/fun.php',
+        this.$http.jsonp('http://demo.raoye.me/fun.php',
 
                                 {
                                     params:{
@@ -125,7 +129,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.nav-title{width:150px;background-color:#e8e8e8;float:left;}
+.nav-title{width:150px;background-color:#e8e8e8;float:left;position:relative;top:-17px;}
 .nav-title ul{padding:0;margin:0;}
 .nav-title li{text-align:center;line-height:60px;cursor:pointer}
 .nav-title li:not(:first-child){border-top:solid 1px #009A61;}
