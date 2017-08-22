@@ -14,7 +14,7 @@ export default {
 
     //进行jsonp得到相关的数据
     getWebarrs(type){
-        this.$http.jsonp('http://demo.raoye.me/fun.php',
+        this.$http.jsonp('http://www.xxx.com/fun.php',
 
             {
                 params:{

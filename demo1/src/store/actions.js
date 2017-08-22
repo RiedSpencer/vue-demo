@@ -10,7 +10,7 @@ export const nav = ({commit},type) =>{
     $(".nav li").removeClass("clicked_nav");
     $(".nav ."+type).addClass("clicked_nav");
 
-    Vue.http.jsonp('http://demo.raoye.me/fun.php',
+    Vue.http.jsonp('http://www.xxx.com/fun.php',
 
         {
             params:{

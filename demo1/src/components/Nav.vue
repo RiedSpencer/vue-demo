@@ -90,7 +90,7 @@ export default {
         var title = $(".title").val();
         var url = $(".website").val();
         var that = this;
-        this.$http.jsonp('http://demo.raoye.me/fun.php',
+        this.$http.jsonp('http://www.xxx.com/fun.php',
 
                                 {
                                     params:{
